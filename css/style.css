@@ -1,0 +1,101 @@
+/* 
+File: style.css
+Student: Aidan Javidpour
+Date: 09-08-2025
+Description: Styling for my Pokémon website
+*/
+
+/* Main figure styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  color: #222;
+  margin: 20px;
+}
+
+h1 { color: #e63946; }
+h2 { color: #457b9d; margin-top: 1.5em; }
+
+img {
+  display: block;
+  margin: 10px 0;
+  max-width: 100%;
+}
+
+.type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem .8rem;
+  align-items: center;
+  margin: .75rem 0 0.25rem;
+}
+
+.type-filters .controls {
+  display: flex;
+  gap: .5rem;
+  margin-right: .5rem;
+}
+
+.type-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .25rem .5rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  background: #fff;
+  font-size: .95rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+}
+
+th { background: #e63946; color: white; }
+tr:nth-child(even) { background-color: #f9f9f9; }
+
+#typeChart {
+  table-layout: fixed;
+  width: 100%;
+}
+#typeChart th,
+#typeChart td {
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+#typeChart tbody {
+  min-height: 120px;
+  display: block;
+}
+#typeChart thead,
+#typeChart tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Pokémon type colors */
+td.water    { color: #1e90ff; font-weight: bold; }
+td.fire     { color: #ff4500; font-weight: bold; }
+td.dark     { color: #4b3621; font-weight: bold; }
+td.electric { color: #ffcc00; font-weight: bold; }
+td.grass    { color: #228b22; font-weight: bold; }
+td.psychic  { color: #ff69b4; font-weight: bold; }
+td.dragon   { color: #6a5acd; font-weight: bold; }
+td.flying   { color: #87ceeb; font-weight: bold; }
+td.fairy    { color: #ffb6c1; font-weight: bold; }
+td.steel    { color: #b0c4de; font-weight: bold; }

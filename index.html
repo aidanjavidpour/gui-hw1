@@ -1,0 +1,175 @@
+<!--
+File: index.html
+Student: Aidan Javidpour
+Date: 09-08-2025
+Description: A simple Pokémon web page for my assignment
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pokémon Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Basic headers and paragraphs discussing Pokémon -->
+  <h1>Pokémon Basics</h1>
+  <p>
+    Pokémon is a game where you catch and train creatures.
+    Each Pokémon can have up to two types, with the most popular being water. These types can decide whether a certain Pokémon is stronger than the other.
+    For example, fire is super effective or stronger against grass but is not very effective against water types.
+  </p>
+
+  <h2>How I got into Pokémon</h2>
+  <p>
+    When I was 7 years old I got a Nintendo DS for my birthday. With it came two games for the system; Pokémon Soul Silver and Pokémon Platinum. I played these games as much as I could for as long as I could.
+    I eventually lost my Platinum game for a year but found it and then completed the game 100% of the way through. It was very convenient since my birthday is in August and the games released in September,
+    so my parents would get me the games once they came out as part of my birthday.
+  </p>
+
+  <h2>How to Play</h2>
+  <p>
+    You start as a young kid about to start their journey in a certain region depending on the game. Each region will have different Pokémon with some overlapping. Currently there are 9 generations of games with over 1,000 unique Pokémon throughout.
+    When you start the game you choose your starting Pokémon which is a fire, water, or grass type. You then explore the region while challenging gym leaders who give you badges. Gym leaders each use a specific type of Pokémon.
+    It could be ghost, fairy, steel, ground, etc. On your journey you will end up getting involved with an evil organization and have to fight and defeat all of them in battles.
+    Once you finis that you end up in a position to catch the game's legendary Pokémon.
+    Once you have defeated the evil organization and collected all 8 badges in the region, you ascend victory road which brings you to the elite 4.
+    Here you fight some of the strongest trainers in the game. Similar to gyms, the elite four center their team around a certain type but may have some Pokémon that do not follow it.
+    Once you have defeated the elite four, you are tasked with the ultimate challenge and have to fight the champion of the region who is also the strongest Pokémon Trainer in the game.
+    After defeating the champion, you have completed the main story.
+  </p>
+
+  <h2>My Favorite Pokémon</h2>
+
+  <!-- Figure for Staraptor-->
+  <figure>
+    <p>
+      Staraptor is a dual Normal/Flying type Pokémon introduced in generation 4.
+    </p>
+    <img src="images/staraptor.jpg" alt="Staraptor" width="350">
+    <figcaption>Image source: <a href="https://pokemondb.net/pokedex/staraptor" target="_blank" rel="noopener">Pokémon Database</a></figcaption>
+  </figure>
+
+  <!-- Type chart with buttons -->
+  <h2>Type Chart of the 10 Most Popular Types</h2>
+  <section aria-labelledby="filter-heading">
+    <h3 id="filter-heading" class="sr-only">Filter types shown in the chart</h3>
+
+    <div class="type-filters" id="typeFilters">
+      <div class="controls">
+        <button type="button" id="selectAllBtn">Select all</button>
+        <button type="button" id="clearAllBtn">Clear all</button>
+      </div>
+
+      <label class="type-chip"><input type="checkbox" name="type" value="water" checked> Water</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="fire" checked> Fire</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="dark" checked> Dark</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="electric" checked> Electric</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="grass" checked> Grass</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="psychic" checked> Psychic</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="dragon" checked> Dragon</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="flying" checked> Flying</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="fairy" checked> Fairy</label>
+      <label class="type-chip"><input type="checkbox" name="type" value="steel" checked> Steel</label>
+    </div>
+  </section>
+
+  <table id="typeChart">
+    <colgroup>
+      <col style="width:22%">
+      <col style="width:26%">
+      <col style="width:36%">
+      <col style="width:16%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Weak To</th>
+        <th>Resists</th>
+        <th>Immune To</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-type="water">
+        <td class="water">Water</td>
+        <td>Electric, Grass</td>
+        <td>Fire, Water, Ice, Steel</td>
+        <td>—</td>
+      </tr>
+      <tr data-type="fire">
+        <td class="fire">Fire</td>
+        <td>Water, Ground, Rock</td>
+        <td>Fire, Grass, Ice, Bug, Steel, Fairy</td>
+        <td>—</td>
+      </tr>
+      <tr data-type="dark">
+        <td class="dark">Dark</td>
+        <td>Fighting, Bug, Fairy</td>
+        <td>Ghost, Dark</td>
+        <td>Psychic</td>
+      </tr>
+      <tr data-type="electric">
+        <td class="electric">Electric</td>
+        <td>Ground</td>
+        <td>Electric, Flying, Steel</td>
+        <td>—</td>
+      </tr>
+      <tr data-type="grass">
+        <td class="grass">Grass</td>
+        <td>Fire, Ice, Poison, Flying, Bug</td>
+        <td>Water, Ground, Electric, Grass</td>
+        <td>—</td>
+      </tr>
+      <tr data-type="psychic">
+        <td class="psychic">Psychic</td>
+        <td>Bug, Ghost, Dark</td>
+        <td>Fighting, Psychic</td>
+        <td>—</td>
+      </tr>
+      <tr data-type="dragon">
+        <td class="dragon">Dragon</td>
+        <td>Ice, Dragon, Fairy</td>
+        <td>Fire, Water, Grass, Electric</td>
+        <td>—</td>
+      </tr>
+      <tr data-type="flying">
+        <td class="flying">Flying</td>
+        <td>Electric, Ice, Rock</td>
+        <td>Grass, Bug, Fighting</td>
+        <td>Ground</td>
+      </tr>
+      <tr data-type="fairy">
+        <td class="fairy">Fairy</td>
+        <td>Poison, Steel</td>
+        <td>Fighting, Bug, Dark</td>
+        <td>Dragon</td>
+      </tr>
+      <tr data-type="steel">
+        <td class="steel">Steel</td>
+        <td>Fire, Fighting, Ground</td>
+        <td>Normal, Grass, Ice, Flying, Psychic, Bug, Rock, Dragon, Steel, Fairy</td>
+        <td>Poison</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Link to the official Pokémon website -->
+  <h2>Learn More</h2>
+  <p>
+    Visit <a href="https://www.pokemon.com" target="_blank" rel="noopener">Pokémon.com</a>
+    for more information about the games.
+  </p>
+
+  <p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+              src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+              alt="Valid CSS!" />
+      </a>
+  </p>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
